@@ -42,18 +42,10 @@
   <main>
     <section class="hero">
       <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-      <button class="hero-button modal-window-button" data-open-model>Заказать услугу</button>
+      <button class="hero-button" type="button">Заказать услугу</button>
     </section>
     
 <!-- ---------------------MODAL window--------------- -->
-      <div class="backgrop is-hidden" data-backdrop>
-        <div class="modal">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint iure nam sapiente totam consequatur dicta quam
-            earum praesentium sequi adipisci!
-          </p>
-          <button data-close-modal>Close</button>
-        </div>
-      </div>
 
     
     <!--Наши преимущества-->
@@ -378,26 +370,5 @@
     </div>
     </div>
   </footer>
-
-      <script>
-        const refs = {
-          openModalBtn: document.querySelector('[data-open-model]'),
-          closeModalBtn: document.querySelector('[data-close-modal]'),
-          modal: document.querySelector('[data-backdrop]'),
-        };
-
-        refs.openModalBtn.addEventListener('click', toggleModal);
-        refs.closeModalBtn.addEventListener('click', toggleModal);
-
-        refs.backdrop.addEventListener('click', logBackdropClick);
-
-        function toggleModal() {
-          refs.backdrop.classList.toggle('is-hidden');
-        }
-        function logBackdropClick() {
-          console.log("Это клик в бекдроп");
-        }
-      </script>
-
 </body>
 </html>
